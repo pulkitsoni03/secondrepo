@@ -1,6 +1,6 @@
 document.getElementById("send-mssg").addEventListener("click",submitForm);
 var i = 0;
-// var txt = "I'm Harsh Soni.";
+// var txt = "I'm Jay Soni.";
 var speed = 200;
 document.getElementById("title-txt").innerHTML="";
 var txt=[`<span id="iam">I'm </span>` ,`<span style="color:#5856d6">H</span>`,`<span style="color:#ff2d55">a</span>`,`<span style="color:#ffcc00">r</span>`,`<span style="color:#4cd964">s</span>`,`<span style="color:#ff9500">h </span>`,`<span style="color:#007AFF">S</span>`,`<span style="color:#4cd964">o</span>`,`<span style="color:#ff2d55">n</span>`,`<span style="color:#ffcc00">i</span>`,`<span>.</span>`];
@@ -47,8 +47,8 @@ function submitForm(){
           }
           fetch("/query",options)
             .then(res=>res.json())
-            .then(data=>{
-                console.log(data.mssg);
+            .then(res=>{
+                console.log(res.mssg);
                 document.getElementById("Name").value="";
                 document.getElementById("Email").value="";
                 document.getElementById("Subject").value="";
@@ -58,6 +58,6 @@ function submitForm(){
     }
     
 }
-//google pay api integration
+
 
 
