@@ -4,7 +4,7 @@ var i = 0;
 var speed = 200;
 document.getElementById("title-txt").innerHTML="";
 var txt=[`<span id="iam">I'm </span>` ,`<span style="color:#5856d6">H</span>`,`<span style="color:#ff2d55">a</span>`,`<span style="color:#ffcc00">r</span>`,`<span style="color:#4cd964">s</span>`,`<span style="color:#ff9500">h </span>`,`<span style="color:#007AFF">S</span>`,`<span style="color:#4cd964">o</span>`,`<span style="color:#ff2d55">n</span>`,`<span style="color:#ffcc00">i</span>`,`<span>.</span>`];
-var temp=``;
+var temp="";
 
 function typeWriter() {
   
@@ -14,7 +14,7 @@ function typeWriter() {
     document.getElementById("title-txt").innerHTML += txt[i];
     temp=document.getElementById("title-txt").innerHTML;
     document.getElementById("title-txt").innerHTML+='|';
-    i++;
+    i+=1;
     setTimeout(typeWriter, speed);
   }
   
@@ -35,7 +35,7 @@ function submitForm(){
         document.getElementById("alert").textContent="Please fill all fields!!";
         setTimeout(() => {
             document.getElementById("alert").textContent="";
-        }, 1000);
+        }, 800);
     }
     else{
         var options={
@@ -47,8 +47,7 @@ function submitForm(){
           }
           fetch("/query",options)
             .then(res=>res.json())
-            .then(res=>{
-                console.log(res.mssg);
+            .then(data=>{
                 document.getElementById("Name").value="";
                 document.getElementById("Email").value="";
                 document.getElementById("Subject").value="";
