@@ -2,14 +2,13 @@ document.getElementById("send-mssg").addEventListener("click",submitForm);
 var i = 0;
 // var txt = "I'm Jay Soni.";
 var speed = 200;
-document.getElementById("title-txt").innerHTML="";
+document.getElementById("title-txt").innerHTML="Hello World";
 var txt=[`<span id="iam">I'm </span>` ,`<span style="color:#5856d6">H</span>`,`<span style="color:#ff2d55">a</span>`,`<span style="color:#ffcc00">r</span>`,`<span style="color:#4cd964">s</span>`,`<span style="color:#ff9500">h </span>`,`<span style="color:#007AFF">S</span>`,`<span style="color:#4cd964">o</span>`,`<span style="color:#ff2d55">n</span>`,`<span style="color:#ffcc00">i</span>`,`<span>.</span>`];
 var temp="";
 
 function typeWriter() {
   
-  if (i < txt.length) {
-    //document.getElementById("title-txt").innerHTML += txt.charAt(i);
+  if (i < txt.length) {   
     document.getElementById("title-txt").innerHTML=temp;
     document.getElementById("title-txt").innerHTML += txt[i];
     temp=document.getElementById("title-txt").innerHTML;
