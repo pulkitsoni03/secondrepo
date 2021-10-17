@@ -4,15 +4,11 @@ html {
 #title-txt{
     height:180px;
 }
-  
-  
-  
 #photos a:hover{
     opacity: 0.5;
 }
 form p{
-    width: 50vw;
-    
+    width: 50vw;  
 }
 form input{
     height:20px;
@@ -26,7 +22,6 @@ a{
     animation-duration: 6s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-
 }
 
 @keyframes buttonhover{
